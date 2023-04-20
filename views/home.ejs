@@ -1,0 +1,63 @@
+<%- include('partials/header'); -%>
+    <div class="container main-body mt-5">
+        <header class="p-3 mb-3 border-bottom">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                    <i class="bi bi-journal-bookmark"></i>
+                </a>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2 ps-4 link-body-emphasis dropdown-toggle" data-bs-toggle="dropdown" id="list">BookList</a>
+                    <ul class="dropdown-menu text-small" id="BookList">
+                      <% for( let index = 0; index < BookList.length; index++ ) { %>
+                        <a class="dropdown-item booklist" href="/books/<%= BookList[index] %>" id="<%= BookList[index] %>">Elements</a>
+                      <% } %>
+                    </ul>
+                  </li>
+                </ul>
+        
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <input type="search" class="form-control" placeholder="Search..." aria-label="Search" id="searchBar">
+                  <ul class="dropdown-menu" id="search-dropdown">
+                    
+                  </ul>
+                </form>
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="<%= AvatarImg %>" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item dropdown-item-danger" href="/logout">
+                      <i class="bi bi-box-arrow-right"></i>
+                      Sign out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <h2 class="text-center my-3">Creator's Choice</h2>
+          <div class="ms-2 px-3 mb-3 py-4">
+            <div class="row pt-3 px-3">
+              <div class="col-lg-4">
+                <img src="http://books.google.com/books/content?id=u2OJwgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="book-cover" class="p-2">
+                <h2 class="fw-normal">The Prophet</h2>
+                <p class="text-secondary">The Prophet is a book of 26 prose poetry fables written in English by the Lebanese-American poet and writer Kahlil Gibran.</p>
+                <p><a class="btn btn-outline-info" href="/books/u2OJwgEACAAJ">View details</a></p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <img src="http://books.google.com/books/content?id=PEpoEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" alt="book-cover" class="p-2">
+                <h2 class="fw-normal">Nineteen Eighty-Four</h2>
+                <p class="text-secondary">Nineteen Eighty-Four (also published as 1984) is a dystopian social science fiction novel and cautionary tale by English writer George Orwell. </p>
+                <p><a class="btn btn-outline-info" href="/books/PEpoEAAAQBAJ">View details</a></p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <img src="http://books.google.com/books/content?id=oESQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="book-cover" class="p-2">
+                <h2 class="fw-normal">A Thousand Splendid Suns</h2>
+                <p class="text-secondary">A Thousand Splendid Suns is at once an incredible chronicle of thirty years of Afghan history and a deeply moving story of family, friendship, faith, and the salvation to be found in love.</p>
+                <p><a class="btn btn-outline-info" href="/books/oESQEAAAQBAJ">View details</a></p>
+              </div><!-- /.col-lg-4 -->
+            </div>
+          </div>
+    </div>
+<%- include('partials/footer'); -%>

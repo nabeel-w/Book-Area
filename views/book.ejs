@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+<div class="p-5 m-5 bg-body-tertiary rounded-5">
+        
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col-auto">
+                <img src="<%= imgURL %>" alt="book-cover" class="p-2 rounded-4">
+            </div>
+            <div class="col-10 mx-2">
+                <h1 class="display-5 fw-bold"><%= title %></h1>
+                <span class="text-secondary fs-6"><%= date %></span>
+                <p class="col-md-8 fs-5 py-3 pb-1"><span class="fw-bold">Author: </span><%= author %></p>
+                <p class="col-md-8 fs-6"><span class="fw-bold">Description: </span><br><span><%- description %></span></p>
+                <p class="col-md-8 fs-6"><span class="fw-bold">Rating: </span><%= rating %> / 5 stars</p>
+                <form action="/addbook/<%= id %>" method="post">
+                    <button class="btn btn-primary btn-lg ms-3 my-2" type="submit">Add to BookList</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer'); -%>
