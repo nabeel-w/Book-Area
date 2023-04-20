@@ -10,10 +10,10 @@
                 <h1 class="display-5 fw-bold"><%= title %></h1>
                 <span class="text-secondary fs-6"><%= date %></span>
                 <p class="col-md-8 fs-5 py-3 pb-1"><span class="fw-bold">Author: </span><%= author %></p>
-                <p class="col-md-8 fs-6"><span class="fw-bold">Description: </span><br><span><%- description %></span></p>
+                <p class="col col-md-8 col-sm-12 fs-6"><span class="fw-bold">Description: </span><br><span><%- description %></span></p>
                 <p class="col-md-8 fs-6"><span class="fw-bold">Rating: </span><%= rating %> / 5 stars</p>
                 <form action="/addbook/<%= id %>" method="post">
-                    <button class="btn btn-primary btn-lg ms-3 my-2" type="submit">Add to BookList</button>
+                    <button class="btn btn-primary col col-lg-2 col-sm-12 ms-3 my-2" type="submit">Add to BookList</button>
                 </form>
             </div>
         </div>

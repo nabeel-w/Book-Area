@@ -1,30 +1,30 @@
 <%- include('partials/header'); -%>
 <div class="container p-5 mt-5">
-    <div class="text-center row col-8 mx-auto" id="form-body">
+    <div class="text-center row col col-lg-8 col-sm-9 mx-auto lgbody" id="form-body">
             <div id="form" class="m-3">
                 <h2 class="p-3">Sign-Up to Book Area</h2>
                 <form action="/signup" method="POST" onsubmit="return validateForm()">
                     <div class="container text-start p-4">
                         <div class="form-group row pt-4">
-                            <div class="col-6 mx-auto">
+                            <div class="col col-lg-6 col-sm-8 mx-auto">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" name="username" autocomplete="off" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-6 mx-auto">
+                            <div class="col col-lg-6 col-sm-8 mx-auto">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" minlength="8" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-6 mx-auto">
+                            <div class="col col-lg-6 col-sm-8 mx-auto">
                                 <label for="password">Confirm Password</label>
                                 <input type="password" class="form-control" name="cpassword" minlength="8" required>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-outline-info col-3 mt-4 mb-3">Sign-Up</button>
+                    <button type="submit" class="btn btn-outline-info col-4 mt-4 mb-3">Sign-Up</button>
                     <div class="row">
                         <hr class="my-2 mb-4 col-3 ms-auto">
                         <p class="col-1">OR</p>

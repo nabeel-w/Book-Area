@@ -9,7 +9,7 @@
         
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                   <li><a href="#" class="nav-link px-2 ps-4 link-body-emphasis dropdown-toggle" data-bs-toggle="dropdown" id="list">BookList</a>
-                    <ul class="dropdown-menu text-small" id="BookList">
+                    <ul class="dropdown-menu text-small scrollarea" id="BookList">
                       <% for( let index = 0; index < BookList.length; index++ ) { %>
                         <a class="dropdown-item booklist" href="/books/<%= BookList[index] %>" id="<%= BookList[index] %>">Elements</a>
                       <% } %>
@@ -18,10 +18,12 @@
                 </ul>
         
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                  <input type="search" class="form-control" placeholder="Search..." aria-label="Search" id="searchBar">
-                  <ul class="dropdown-menu" id="search-dropdown">
+                  <div class="dropstart">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search" id="searchBar">
+                  <ul class="dropdown-menu scrollarea" id="search-dropdown">
                     
                   </ul>
+                  </div>
                 </form>
                 <div class="dropdown text-end">
                   <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
