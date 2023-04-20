@@ -24,10 +24,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(`mongodb+srv://admin-nabeel:${process.env.DBPASS}@cluster0.3jl39cv.mongodb.net/test`, {useNewUrlParser: true});
+mongoose.connect("mongodb://127.0.0.1:27017/usersDB", {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema ({
     email: String,
+    username: String,
     password: String,
     userId: String,
     AvatarImg: String,
@@ -57,9 +58,9 @@ passport.use(new GoogleStrategy({
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    //console.log(profile);
+    console.log(profile);
 
-    User.findOrCreate({ userId: profile.id, AvatarImg: profile.photos[0].value}, function (err, user) {
+    User.findOrCreate({ userId: profile.id, AvatarImg: profile.photos[0].value,username: profile.displayName}, function (err, user) {
       return cb(err, user);
     });
   }

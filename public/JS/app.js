@@ -5,9 +5,10 @@ const List=document.getElementById("BookList");
 const Id=document.querySelectorAll(".booklist");
 
 
-console.log(Id[0].id);
+//console.log(Id[0].id);
 
 searchBar.addEventListener("input",()=>{
+    //console.log("called");
     let query=searchBar.value;
     if(query.length >2){
         searchMenu.classList.add('show');
