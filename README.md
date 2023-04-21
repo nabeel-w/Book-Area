@@ -1,5 +1,5 @@
 # Book-Area
-This is a website that allows users to search for books using the Google Books API. The website also features OAuth 2.0 authentication and allows users to save their favorite books in a database.
+This is a website that allows users to search for books using the Google Books API. The website also features OAuth 2.0 authentication and allows users to save their favorite books in a BookList thats stored in a database.
 ## Preview
 ![Website Preview](https://i.ibb.co/gPr50nZ/Screenshot-2023-04-20-104305.png)
 ## Features
