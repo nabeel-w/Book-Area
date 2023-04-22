@@ -67,7 +67,8 @@ function createList(Id){
                         </div>
                         <div class="col-6 ms-5">
                             <strong class="pt-3">${title}</strong>
-                            <p class="py-3">${author}</p>
+                            <p class="pt-3">${author}</p>
+                            <a href="/delete/${id}" class="btn btn-danger btn-sm ms-3 me-0">Remove From BookList</a>
                         </div>
                     </div>
                 `;

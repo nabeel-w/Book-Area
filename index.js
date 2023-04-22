@@ -150,6 +150,20 @@ app.get("/books/:id",(req,res)=>{
     console.log(err);
   })
 })
+app.get("/delete/:id",(req,res)=>{
+  let id=req.params.id;
+  if(req.isAuthenticated()){
+    User.findOne({_id:req.user._id})
+    .then(result=>{
+      result.booklist.remove(id);
+      console.log(result.booklist);
+          result.save();
+          res.redirect("/");        
+    }).catch(err=>{
+      console.log(err);
+    })
+  }
+})
 app.post("/addbook/:id",(req,res)=>{
   let id=req.params.id;
   if(req.isAuthenticated()){
